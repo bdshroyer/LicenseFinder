@@ -216,6 +216,17 @@ module LicenseFinder
       end
     end
 
+    class MixProject < Project
+      def add_dep
+        install_fixture("mix.exs")
+      end
+
+      def install
+        shell_out("mix deps.get")
+        shell_out("mix deps.compile")
+      end
+    end
+
     class NugetProject < Project
       def add_dep
         clone('nuget')

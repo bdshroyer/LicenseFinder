@@ -70,6 +70,8 @@ module LicenseFinder
         maven_include_groups: config.maven_include_groups,
         rebar_command: config.rebar_command,
         rebar_deps_dir: config.rebar_deps_dir,
+        mix_command: config.mix_command,
+        mix_deps_dir: config.mix_deps_dir,
       )
     end
   end
