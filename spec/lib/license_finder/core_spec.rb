@@ -19,7 +19,9 @@ module LicenseFinder
           project_path: 'other_directory',
           gradle_command: 'just_do_it',
           rebar_command: 'do_it',
-          rebar_deps_dir: 'nowhere/deps'
+          rebar_deps_dir: 'nowhere/deps',
+          mix_command: 'mix_it',
+          mix_deps_dir: 'mixes_in_here/deps'
         }
       }
       let(:package_options) {
@@ -32,7 +34,9 @@ module LicenseFinder
           gradle_include_groups: nil,
           maven_include_groups: nil,
           rebar_command: configuration.rebar_command,
-          rebar_deps_dir: configuration.rebar_deps_dir
+          rebar_deps_dir: configuration.rebar_deps_dir,
+          mix_command: configuration.mix_command,
+          mix_deps_dir: configuration.mix_deps_dir
         }
       }
 

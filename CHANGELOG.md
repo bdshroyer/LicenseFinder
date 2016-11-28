@@ -1,5 +1,10 @@
 # not yet released
 
+Features:
+
+* Experimental support for Elixir projects using Mix.
+
+
 Bugfixes:
 
 * Gradle works in CI containers where TERM is not set (revert and fix of c15bdb7, which broke older versions of gradle)

@@ -38,6 +38,8 @@ module LicenseFinder
           "--gradle_command=do_things",
           "--rebar_command=do_other_things",
           "--rebar_deps_dir=rebar_dir",
+          "--mix_command=surprise_me",
+          "--mix_deps_dir=mix_dir",
           "--save"
         ] }
         let(:logger_options) {
@@ -52,6 +54,8 @@ module LicenseFinder
           gradle_command: 'do_things',
           rebar_command: 'do_other_things',
           rebar_deps_dir: 'rebar_dir',
+          mix_command: 'surprise_me',
+          mix_deps_dir: 'mix_dir',
           save: 'license_report',
           logger: {}
         } }

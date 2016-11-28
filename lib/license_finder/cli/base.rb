@@ -33,6 +33,8 @@ module LicenseFinder
           :gradle_include_groups,
           :rebar_command,
           :rebar_deps_dir,
+          :mix_command,
+          :mix_deps_dir,
           :save
         ).merge(
           logger: logger_config
