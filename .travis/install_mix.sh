@@ -3,10 +3,7 @@ set -e
 set -x
 
 
-kerl build 19.1 19.1
-kerl install 19.1 /usr/local/erlang19.1
-. /usr/local/erlang19.1/activate
-
-git clone https://github.com/elixir-lang/elixir.git
-cd elixir
-make install
+wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && dpkg -i erlang-solutions_1.0_all.deb
+apt-get update
+apt-get install esl-erlang
+apt-get install elixir
