@@ -412,6 +412,7 @@ EOM
         status = $?
         unless status.success? || allow_failures
           message = sprintf ERROR_MESSAGE_FORMAT, command, output.chomp, status.exitstatus
+          message = "output: #{output.chomp}"
           raise RuntimeError.new(message)
         end
 
