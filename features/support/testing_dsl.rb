@@ -222,6 +222,7 @@ module LicenseFinder
       end
 
       def install
+        shell_out("mix local.hex --force")
         shell_out("mix deps.get")
         shell_out("mix deps.compile")
       end
