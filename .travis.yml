@@ -7,9 +7,6 @@ rvm:
 - 2.3.0
 - jruby-1.7.23
 - jruby-9.0.4.0
-language: elixir
-elixir:
-- 1.3
 otp_release:
 - 18.2.1
 matrix:
@@ -32,6 +29,7 @@ before_install:
 - ".travis/install_rebar.sh"
 - ".travis/install_bower.sh"
 - ".travis/install_godep.sh"
+- ".travis/install_mix.sh"
 script:
 - rake install
 - rake spec
