@@ -31,6 +31,7 @@ before_install:
 - ".travis/install_godep.sh"
 - ".travis/install_mix.sh"
 script:
+-  erl -eval 'erlang:display(erlang:system_info(otp_release)), halt().' -noshell
 - rake install
 - rake spec
 - rake features
