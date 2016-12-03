@@ -30,8 +30,10 @@ before_install:
 - ".travis/install_bower.sh"
 - ".travis/install_godep.sh"
 - ".travis/install_mix.sh"
+before_script:
+- kerl list installations
 script:
--  erl -eval 'erlang:display(erlang:system_info(otp_release)), halt().' -noshell
+- erl -eval 'erlang:display(erlang:system_info(otp_release)), halt().' -noshell
 - rake install
 - rake spec
 - rake features
