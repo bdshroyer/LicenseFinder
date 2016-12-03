@@ -13,7 +13,7 @@ matrix:
   allow_failures:
   - rvm: jruby-1.7.23
 env:
-  - PATH=$PATH:$HOME/gradle/bin:$HOME/rebar:$HOME/go/bin:$HOME/kerl:$HOME/elixir/bin GOPATH=$HOME/go
+  - PATH=$PATH:$HOME/gradle/bin:$HOME/rebar:$HOME/go/bin:$HOME/kerl:$HOME/erlang:$HOME/elixir/bin GOPATH=$HOME/go
 notifications:
   email:
   - licensefinder@pivotallabs.com
@@ -31,8 +31,10 @@ before_install:
 - ".travis/install_godep.sh"
 - ".travis/install_mix.sh"
 before_script:
+- kerl update releases
 - kerl list installations
 script:
+- . /erlang/activate
 - erl -eval 'erlang:display(erlang:system_info(otp_release)), halt().' -noshell
 - rake install
 - rake spec
