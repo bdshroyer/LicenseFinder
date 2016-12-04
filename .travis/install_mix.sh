@@ -19,6 +19,7 @@ pushd ~
   #wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
   #dpkg -i erlang-solutions_1.0_all.deb --force-not-root --root=erlang
 
+  apt-get update
   apt-get source esl-erlang
   ./configure --prefix=$HOME/erlang
   make
