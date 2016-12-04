@@ -20,9 +20,11 @@ pushd ~
   #dpkg -i erlang-solutions_1.0_all.deb --force-not-root --root=erlang
 
   apt-get source erlang
-  ./configure --prefix=$HOME/erlang
-  make
-  make install
+  pushd erlang
+    ./configure --prefix=$HOME/erlang
+    make
+    make install
+  popd
 
   wget https://github.com/elixir-lang/elixir/releases/download/v1.3.4/Precompiled.zip
   unzip Precompiled.zip -d elixir
