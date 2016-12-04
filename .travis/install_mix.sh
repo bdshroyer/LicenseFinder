@@ -15,9 +15,14 @@ pushd ~
   #kerl build 18.3 erlang-18.3
   #kerl install erlang-18.3 erlang
 
- mkdir erlang
- wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
- dpkg -i erlang-solutions_1.0_all.deb --force-not-root --root=erlang
+  #mkdir erlang
+  #wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
+  #dpkg -i erlang-solutions_1.0_all.deb --force-not-root --root=erlang
+
+  apt-get source esl-erlang
+  ./configure --prefix=$HOME/erlang
+  make
+  make install
 
   wget https://github.com/elixir-lang/elixir/releases/download/v1.3.4/Precompiled.zip
   unzip Precompiled.zip -d elixir
