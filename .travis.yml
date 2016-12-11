@@ -12,6 +12,10 @@ otp_release:
 matrix:
   allow_failures:
   - rvm: jruby-1.7.23
+addons:
+  apt:
+    packages:
+      - erlang
 env:
   - PATH=$PATH:$HOME/gradle/bin:$HOME/rebar:$HOME/go/bin:$HOME/erlang:$HOME/elixir/bin GOPATH=$HOME/go
 notifications:
